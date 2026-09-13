@@ -50,7 +50,7 @@ window.IP1F_DATA = {
     },
     "2026-09-16": {
       "shared": "",
-      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-language-art\">Language Arts</span></div><ul><li>Review p 36-37, read out loud.</li></ul><div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>中文朗讀 1</p>"
+      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-language-art\">Language Arts</span></div><ul><li>Review p 36-37, read out loud.</li></ul><div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>中文第 1 次｜上台座號：1、2、3、4、42、43、44</p>"
     },
     "2026-09-17": {
       "shared": "",
@@ -74,7 +74,7 @@ window.IP1F_DATA = {
     },
     "2026-09-23": {
       "shared": "",
-      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-language-art\">Language Arts</span></div><ul><li>Read p. 61-64 out loud.</li><li>Vocabulary quiz p. 35, 37 tomorrow.</li></ul><div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>英文朗讀 4</p><div class=\"tag-header\"><span class=\"tag-pill pill-school\">健康</span></div><p>牙齒塗氟</p>"
+      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-language-art\">Language Arts</span></div><ul><li>Read p. 61-64 out loud.</li><li>Vocabulary quiz p. 35, 37 tomorrow.</li></ul><div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>英文第 1 次｜上台座號：13、14、15、16、32、33、34、35</p><div class=\"tag-header\"><span class=\"tag-pill pill-school\">健康</span></div><p>牙齒塗氟</p>"
     },
     "2026-09-24": {
       "shared": "",
@@ -101,8 +101,8 @@ window.IP1F_DATA = {
       "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-language-art\">Language Arts</span></div><ul><li>Review unit 1.</li><li>Sign vocabulary 1.2 quiz.</li></ul>"
     },
     "2026-09-30": {
-      "shared": "<div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間演講</span></div><p>中文第 2 次</p>",
-      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-language-art\">Language Arts</span></div><ul><li>Review for unit 1 quiz tomorrow.</li></ul><div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>中文朗讀 6</p>"
+      "shared": "",
+      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-language-art\">Language Arts</span></div><ul><li>Review for unit 1 quiz tomorrow.</li></ul><div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>中文第 2 次｜上台座號：21、22、23、24、25、26、27</p>"
     },
     "2026-10-01": {
       "shared": "",
@@ -126,11 +126,19 @@ window.IP1F_DATA = {
     },
     "2026-10-14": {
       "shared": "",
-      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>中文朗讀 3</p>"
+      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>中文第 3 次｜上台座號：9、10、11、12、36、37、38</p>"
     },
     "2026-10-16": {
       "shared": "",
       "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-school\">健康</span></div><p>流感疫苗</p>"
+    },
+    "2026-10-21": {
+      "shared": "",
+      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>英文第 2 次｜上台座號：17、18、19、20、28、29、30、31</p>"
+    },
+    "2026-11-18": {
+      "shared": "",
+      "grade1": "<div class=\"tag-header\"><span class=\"tag-pill pill-speech\">晨間朗讀</span></div><p>英文第 3 次｜上台座號：5、6、7、8、39、40、41</p>"
     }
   },
   "events": {
@@ -250,7 +258,7 @@ window.IP1F_DATA = {
     {
       "date": "2026-09-15",
       "label": "WBC",
-      "text": "WBC 課外活動"
+      "text": "WBC 行前活動｜地點：WBC 大樓｜服裝：薇小體服（長褲）＋運動鞋｜攜帶：600cc 水壺、個人藥品；雨天帶折傘｜課程：環境解密、雲動身韻、創藝智造、盤上冒險｜勿帶零食、口香糖及飲料｜<a href=\"assets/wbc-notice-2026-09-15.jpg\" target=\"_blank\" rel=\"noopener\">查看原始通知</a>"
     },
     {
       "date": "2026-11-10",

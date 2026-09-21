@@ -23,7 +23,7 @@ const { chromium } = require('C:/Users/User/.cache/codex-runtimes/codex-primary-
   if (await page.locator('select').count() !== 1) throw Error('Unexpected child selector');
   const visible = await page.locator('body').innerText();
   for (const forbidden of ['哥哥', '二年級', '校車', '接送', '學習帳密']) if (visible.includes(forbidden)) throw Error(`Private content visible: ${forbidden}`);
-  const schedule = await page.evaluate(() => ({ base: window.IP1F_DATA.base, activities: window.IP1F_DATA.activities, subjects: window.IP1F_DATA.subjects }));
+  const schedule = await page.evaluate(() => ({ base: window.IP1F_DATA.base, activities: window.IP1F_DATA.activities, subjects: window.IP1F_DATA.subjects, exams: window.IP1F_DATA.exams }));
   const readings = {
     '2026-09-16': '中文第 1 次｜上台座號：1、2、3、4、42、43、44',
     '2026-09-23': '英文第 1 次｜上台座號：13、14、15、16、32、33、34、35',
@@ -38,6 +38,17 @@ const { chromium } = require('C:/Users/User/.cache/codex-runtimes/codex-primary-
   const coding = schedule.subjects.find(item => item.date === '2026-09-17' && item.subject === '數位與邏輯');
   if (!coding?.tasks.includes('第 3 週：海豚歐文的研究室（一）｜STEAM＋Maker')) throw Error('Coding schedule missing or incorrect');
   if (await page.locator('td[data-date="2026-09-17"] .pill-coding').count() !== 1) throw Error('Coding label style missing');
+  const contactBook = schedule.subjects.find(item => item.date === '2026-09-18' && item.subject === '聯絡本');
+  for (const detail of ['複習「注音①號本」第四課並訂正', '依班級雲端進度表複習 LA', '線上查看 STEAM 課程相關補充', '檢查鉛筆盒文具並削好鉛筆']) if (!contactBook?.tasks.includes(detail)) throw Error(`9/18 contact book missing: ${detail}`);
+  for (const [date, detail] of Object.entries({
+    '2026-09-19': '五樓活動中心',
+    '2026-09-21': '完成藍思閱讀測驗',
+    '2026-09-23': '牙齒塗氟：攜帶牙刷（當日帶回）',
+    '2026-09-24': '家庭樹活動：攜帶數張已剪好的家人照片',
+    '2026-09-30': '疫苗意願簽署截止'
+  })) if (!schedule.activities.some(item => item.date === date && item.text.includes(detail))) throw Error(`Date notice missing on ${date}: ${detail}`);
+  if (!schedule.exams.some(([date, text]) => date === '2026-09-23' && text === '國語第四課')) throw Error('9/23 Chinese Lesson 4 exam missing');
+  if (!(await page.locator('td[data-date="2026-09-18"]').innerText()).includes('下週三（9/23）考國語第四課')) throw Error('9/18 exam notice missing from calendar');
   await page.evaluate(() => localStorage.setItem('ip-calendar:v2:device-state', 'personal-version-marker'));
   await page.locator('#todo-text').fill('分享版測試待辦');
   await page.locator('#add').click();
